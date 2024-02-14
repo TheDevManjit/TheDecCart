@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ body{
+    
+     background: #CDF5FD;
+ }
+ 
+ img{
+     cursor: pointer;
+ }
+ a{
+    text-decoration: none !important;
+    color: black !important;
+}
+.btn{
+    padding: 10px;
+    border: a;
+    width: 120px;
+}

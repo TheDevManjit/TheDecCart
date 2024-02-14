@@ -1,0 +1,83 @@
+<%- include("partials/header.ejs") %>
+    <div class="H-4 m-3 p-5 buy-card">
+
+
+        <div class="container ">
+            <div class="row justify-content-center ">
+                <div class="col-4 ">
+                    <img src="<%=content.image  %>" alt="" id="product-image">
+                </div>
+                <div class="col-6 ps-5  ">
+                    <div class="card_content">
+                        <p class="title fs-3">
+                            <b>
+                                <%= content.title %>
+                            </b>
+                        </p>
+                        <div class="description">
+                            <p class="fs-5">
+                                <%= content.description %>
+                            </p>
+                        </div>
+                        <p class="categories mt-0 pt-0" name="category">
+                            <%= content.category %>
+                        </p>
+                        <p class="rate fs-5">
+                            <%= content.rating.rate %><span><i class="fa-regular fa-star me-3"></i></span> (<%=
+                                    content.rating.count %>)ratings
+                        </p>
+                        <p class="price fs-5 mt-3"><i class="fa-solid fa-indian-rupee-sign "></i>
+                            <%= Math.floor(content.price) %> <span></span>70%Off</span>
+                        </p>
+                        <div class="btn-div">
+                            <button class="btn btn-success btn-sm me-3">Buy</button>
+                            <button class="btn btn-info btn-sm"> Add Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- suggesations -->
+    <div class="H-4">
+        <% cat_content.forEach(product=> { %>
+            <div class="grid_item">
+                <a href="/buypage/<%= product.id %>">
+                <div class="card">
+                    <div class="image_container">
+                        <!-- Include product ID in the URL -->
+                        <img class="card-image" src="<%= product.image %>" alt="app development" width="320px"
+                            height="192px" />
+
+                    </div>
+                    <div class="card_content">
+                        <p class="title">
+                            <b>
+                                <%= product.title %>
+                            </b>
+                        </p>
+                        <p class="categories mt-0 pt-0">
+                            <%= product.category %>
+                        </p>
+                        <p class="rate">
+                            <%= product.rating.rate %><span><i class="fa-regular fa-star"></i></span> (<%=
+                                    product.rating.count %>)
+                        </p>
+                        <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i>
+                            <%= Math.floor(product.price) %> <span></span>70%Off</span>
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+            </div>
+            <% }); %>
+    </div>
+
+
+    <%- include("partials/footer.ejs") %>

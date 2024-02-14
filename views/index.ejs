@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="H-2">
+        <div class="H-2-1">
+            <a href="/categories/<%= all_cat_content[0] %>">
+            <img src="/images/electronic.jpg" alt="Mens Clothing" width="100px" height="100px">
+           
+                <p><%=all_cat_content[0]  %></p>
+            </a>
+        </div>
+        <div class="H-2-2">
+            <a href="/categories/<%= all_cat_content[1] %>">
+            <img src="/images/jwelary.webp" alt="Women clothing" width="100px" height="100px">
+        
+                <p><%=all_cat_content[1] %></p>
+            </a>
+        </div>
+        <div class="H-2-3">
+            <a href="/categories/<%= all_cat_content[2] %>">
+            <img src="/images/mens.webp" alt="Jewelary" width="100px" height="100px">
+            
+                <p><%=all_cat_content[2] %></p>
+            </a>
+        </div>
+        <div class="H-2-4">
+            <a href="/categories/<%= all_cat_content[3] %>">
+            <img src="/images/women.jpg" alt="Electronic" width="100px" height="100px">
+    
+                <p><%=all_cat_content[3] %></p>
+            </a>
+        </div>
+    </div>
+    <!-- product -->
+
+    <%- include("partials/carsoul.ejs") %>
+
+   <%- include("partials/product.ejs") %>
+
+
+
+   <%- include("partials/footer.ejs") %>

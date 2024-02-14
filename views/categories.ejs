@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+<div class="H-4">
+    <% product.forEach(product=> { %>
+        <div class="grid_item">
+            <a href="/buypage/<%= product.id %>">
+            <div class="card">
+                <div class="image_container">
+                    <!-- Include product ID in the URL -->
+                    <img class="card-image" src="<%= product.image %>" alt="app development" width="320px"
+                        height="192px" />
+
+                </div>
+                <div class="card_content">
+                    <p class="title">
+                        <b>
+                            <%= product.title %>
+                        </b>
+                    </p>
+                    <p class="categories mt-0 pt-0">
+                        <%= product.category %>
+                    </p>
+                    <p class="rate">
+                        <%= product.rating.rate %><span><i class="fa-regular fa-star"></i></span> (<%=
+                                product.rating.count %>)
+                    </p>
+                    <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i>
+                        <%= Math.floor(product.price) %> <span></span>70%Off</span>
+                    </p>
+                </div>
+            </div>
+            </a>
+
+        </div>
+        <% }); %>
+</div>
+<%- include("partials/footer.ejs") %>
