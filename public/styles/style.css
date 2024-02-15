@@ -91,11 +91,19 @@ font-size: 20px;
 }
 
 .grid_item {
+  /* From https://css.glass */
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .card {
+  background: rgba(255, 255, 255, 0.15);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.1px);
+-webkit-backdrop-filter: blur(4.1px);
+border: 1px solid rgba(255, 255, 255, 0.25);
   max-width: 322px;
   height: 400px;
   border-radius: 25px;
